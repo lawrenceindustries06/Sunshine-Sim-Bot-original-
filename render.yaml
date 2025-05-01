@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: sunshine-solar-sim
+    env: python
+    buildCommand: pip install -r render-requirements.txt
+    startCommand: python main.py
+    plan: free
+    autoDeploy: false
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: APPLICATION_ID
+        sync: false

@@ -1,0 +1,13 @@
+[project]
+name = "sunshine-solar-sim"
+version = "0.1.0"
+description = "Discord bot for an idle solar energy simulation game"
+requires-python = ">=3.11"
+dependencies = [
+    "discord.py==2.3.2",
+    "python-dotenv==1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/sunshine-solar-sim"
+Issues = "https://github.com/yourusername/sunshine-solar-sim/issues"

@@ -16,6 +16,9 @@ class UserManagement(commands.Cog):
     @app_commands.command(name="start", description="Start your solar farm adventure!")
     async def start(self, interaction: discord.Interaction):
         """Register a new user and initialize their farm"""
+        # Increment command counter
+        self.bot.command_count += 1
+        
         user_id = str(interaction.user.id)
         
         # Check if user already exists
@@ -68,6 +71,9 @@ class UserManagement(commands.Cog):
     @app_commands.command(name="status", description="Check your solar farm status")
     async def status(self, interaction: discord.Interaction):
         """Show the user's current farm status"""
+        # Increment command counter
+        self.bot.command_count += 1
+        
         user_id = str(interaction.user.id)
         
         # Check if user exists
@@ -146,6 +152,9 @@ class UserManagement(commands.Cog):
     @app_commands.command(name="help", description="Get help with Sunshine Solar Sim commands")
     async def help_command(self, interaction: discord.Interaction):
         """Display help information about the bot commands"""
+        # Increment command counter
+        self.bot.command_count += 1
+        
         embed = discord.Embed(
             title="☀️ Sunshine Solar Sim - Help",
             description="Welcome to Sunshine Solar Sim! Here are the commands you can use:",
@@ -156,7 +165,8 @@ class UserManagement(commands.Cog):
         basic_commands = (
             "`/start` - Start your solar farm adventure\n"
             "`/status` - Check your solar farm status\n"
-            "`/help` - Show this help message"
+            "`/help` - Show this help message\n"
+            "`/analytics` - View bot statistics"
         )
         embed.add_field(name="📋 Basic Commands", value=basic_commands, inline=False)
         
